@@ -1,1 +1,557 @@
+/* ========================================
+   PORTFOLIO - NATALY PAULINO
+  
+   ======================================== */
 
+
+/* ---------- VARIABLES ---------- */
+
+:root {
+    --rosa: #c9829b;
+    --rosa-claro: #f5e6eb;
+    --rosa-suave: #fff7f9;
+    --rosa-oscuro: #a85f79;
+
+    --texto: #302b2d;
+    --texto-suave: #756d70;
+
+    --blanco: #ffffff;
+    --fondo: #fcf9fa;
+
+    --sombra: 0 10px 30px rgba(80, 45, 58, 0.08);
+    --sombra-hover: 0 18px 40px rgba(80, 45, 58, 0.14);
+
+    --radio: 20px;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 0;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--rosa);
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--rosa-oscuro);
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #f5dfe7 0,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            #f8e9ed 0,
+            transparent 25%
+        ),
+        var(--rosa-suave);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 950px;
+
+    margin: auto;
+    padding: 60px 0 100px;
+}
+
+.saludo {
+    color: var(--rosa-oscuro);
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.05;
+    letter-spacing: -4px;
+    max-width: 850px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--rosa);
+}
+
+.descripcion {
+    max-width: 650px;
+    margin-top: 30px;
+
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+}
+
+
+/* ---------- BOTONES ---------- */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.principal {
+    background: var(--rosa);
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(169, 95, 121, 0.25);
+}
+
+.btn.principal:hover {
+    background: var(--rosa-oscuro);
+    box-shadow: 0 12px 25px rgba(169, 95, 121, 0.3);
+}
+
+.btn.secundario {
+    background: white;
+    border: 1px solid #ead8de;
+    color: var(--texto);
+}
+
+.btn.secundario:hover {
+    border-color: var(--rosa);
+}
+
+
+/* ---------- SECCIONES ---------- */
+
+.section {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    padding: 110px 0;
+}
+
+.section-title {
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: var(--rosa);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 2.7rem;
+    letter-spacing: -1px;
+}
+
+.section-title span {
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--texto-suave);
+}
+
+
+/* ---------- SOBRE MÍ ---------- */
+
+.sobre-mi {
+    background: var(--blanco);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.skill {
+    background: var(--rosa-suave);
+    border: 1px solid #f0dce3;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+}
+
+
+/* ---------- PROYECTOS ---------- */
+
+.practicas {
+    background: var(--fondo);
+}
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--blanco);
+
+    border: 1px solid #f0e4e8;
+
+    border-radius: var(--radio);
+
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform 0.35s,
+        box-shadow 0.35s,
+        border-color 0.35s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra-hover);
+
+    border-color: #e4b8c7;
+}
+
+.project-icon {
+    min-width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--rosa-claro);
+
+    border-radius: 18px;
+
+    font-size: 1.8rem;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-type {
+    color: var(--rosa-oscuro);
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.project-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: var(--texto-suave);
+
+    font-size: 0.92rem;
+}
+
+
+/* ---------- TAGS ---------- */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 18px;
+}
+
+.tags span {
+    background: #faf0f3;
+
+    color: var(--rosa-oscuro);
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.72rem;
+
+    font-weight: bold;
+}
+
+
+/* ---------- ENLACE PROYECTO ---------- */
+
+.project-link {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    color: var(--rosa-oscuro);
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    transform: translateX(5px);
+}
+
+
+/* ---------- CONTACTO ---------- */
+
+.contacto {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #f5dce5,
+            transparent 45%
+        ),
+        var(--rosa-suave);
+
+    border-radius: 30px;
+
+    margin-bottom: 80px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contacto .section-title {
+    margin-bottom: 20px;
+}
+
+.contacto > p {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: var(--texto-suave);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #eadde1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--texto-suave);
+
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--rosa-oscuro);
+
+    font-weight: bold;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 85%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        width: 85%;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        width: 85%;
+        padding: 80px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
