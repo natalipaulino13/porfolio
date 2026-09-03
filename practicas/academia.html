@@ -1,0 +1,280 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia | Nataly Paulino</title>
+
+<link rel="stylesheet" href="../css/style.css"> </head> <body>
+<header class="hero">
+
+   <a href="../index.html" class="back">
+← Volver al portfolio
+
+</a>
+    <div class="hero-content">
+
+        <span class="tag">Java · POO · Swing</span>
+
+        <h1>Gestión de Personal</h1>
+
+        <p>
+            Práctica desarrollada en Java para gestionar el personal
+            de una organización mediante programación orientada a objetos,
+            herencia, ficheros de texto y Java Swing.
+        </p>
+
+        <a
+            href="https://github.com/natalipaulino13/practica.academia.java"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+        >
+            Ver práctica en GitHub ↗
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="section">
+
+        <h2>Sobre la práctica</h2>
+
+        <p>
+            Esta práctica pertenece al módulo de Programación del ciclo
+            de Desarrollo de Aplicaciones Web (DAW).
+        </p>
+
+        <p>
+            El programa permite gestionar el personal de una organización
+            utilizando programación orientada a objetos, herencia,
+            polimorfismo y ficheros de texto.
+        </p>
+
+        <p>
+            Se trabajan dos tipos de trabajadores:
+            <strong>profesores y administrativos</strong>.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Tipos de personal</h2>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <h3>Persona</h3>
+
+                <p>
+                    Clase abstracta que contiene los datos comunes
+                    de profesores y administrativos, como DNI, nombre,
+                    apellidos, edad, sexo y salario.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Profesor</h3>
+
+                <p>
+                    Clase que hereda de Persona y añade la asignatura
+                    que imparte y el número de horas lectivas.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Administrativo</h3>
+
+                <p>
+                    Clase que hereda de Persona y añade el departamento
+                    donde trabaja y sus años de antigüedad.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Funcionamiento</h2>
+
+        <p>
+            Al iniciar el programa se leen los datos almacenados en
+            <strong>personal.txt</strong> y se crean los objetos
+            correspondientes.
+        </p>
+
+        <p>
+            El programa permite mostrar todo el personal, mostrar
+            únicamente profesores o administrativos y buscar personas
+            mediante su DNI.
+        </p>
+
+        <p>
+            También permite añadir y eliminar profesores y administrativos
+            mediante ventanas gráficas desarrolladas con
+            <strong>Java Swing</strong>.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Gestión de ficheros</h2>
+
+        <p>
+            Los datos de los trabajadores se almacenan en un fichero
+            de texto llamado <strong>personal.txt</strong>.
+        </p>
+
+        <p>
+            Cada trabajador se almacena en una línea y los diferentes
+            datos están separados mediante el carácter <strong>;</strong>.
+        </p>
+
+        <p>
+            Para leer y guardar la información se utilizan clases como
+            <strong>File</strong>, <strong>FileReader</strong>,
+            <strong>FileWriter</strong>, <strong>BufferedReader</strong>
+            y <strong>BufferedWriter</strong>.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Interfaz gráfica</h2>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <h3>Profesores</h3>
+
+                <p>
+                    Ventana gráfica para añadir y eliminar profesores.
+                    Se solicitan datos como DNI, nombre, asignatura,
+                    salario y horas lectivas.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Administrativos</h3>
+
+                <p>
+                    Ventana gráfica para añadir y eliminar administrativos.
+                    Se solicitan datos como DNI, nombre, departamento,
+                    salario y antigüedad.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Validación</h3>
+
+                <p>
+                    Antes de añadir una persona se comprueba que no exista
+                    otro trabajador con el mismo DNI y se validan los
+                    valores numéricos introducidos.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Conceptos utilizados</h2>
+
+        <div class="skills">
+
+            <span>Programación Orientada a Objetos</span>
+            <span>Herencia</span>
+            <span>Polimorfismo</span>
+            <span>Clase abstracta</span>
+            <span>Encapsulamiento</span>
+            <span>Clases y objetos</span>
+            <span>ArrayList</span>
+            <span>instanceof</span>
+            <span>Ficheros de texto</span>
+            <span>File</span>
+            <span>FileReader</span>
+            <span>FileWriter</span>
+            <span>BufferedReader</span>
+            <span>BufferedWriter</span>
+            <span>Scanner</span>
+            <span>IOException</span>
+            <span>Java Swing</span>
+            <span>JFrame</span>
+            <span>JPanel</span>
+            <span>JTextField</span>
+            <span>JButton</span>
+            <span>JRadioButton</span>
+            <span>JOptionPane</span>
+
+        </div>
+
+    </section>
+
+
+    <section class="section result">
+
+        <h2>Resultado</h2>
+
+        <p>
+            El programa permite gestionar profesores y administrativos,
+            consultar el personal almacenado, buscar trabajadores por DNI
+            y guardar los datos en un fichero de texto.
+        </p>
+
+        <p>
+            La práctica combina programación orientada a objetos,
+            herencia, polimorfismo, gestión de ficheros e interfaces
+            gráficas mediante Java Swing.
+        </p>
+
+        <a
+            href="https://github.com/natalipaulino13/practica.academia.java"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+        >
+            Ver código fuente ↗
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+    </p>
+
+</footer>
+
+</body> </html>
