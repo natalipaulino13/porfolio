@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Pacientes | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
+
+        <div class="hero-content">
+
+            <span class="tag">Java · JDBC · SQLite · SQL</span>
+
+            <h1>Gestión de Pacientes</h1>
+
+            <p>
+                Aplicación desarrollada en Java para gestionar los pacientes
+                de una clínica mediante JDBC y una base de datos SQLite.
+            </p>
+
+            <a
+                href="https://github.com/natalipaulino13/practica.clinica.java"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica pertenece al módulo de Programación del ciclo
+                de Desarrollo de Aplicaciones Web (DAW).
+            </p>
+
+            <p>
+                El proyecto consiste en desarrollar una aplicación para
+                gestionar una base de datos de pacientes de una clínica
+                utilizando Java, JDBC y SQLite.
+            </p>
+
+            <p>
+                La aplicación permite almacenar y gestionar información
+                como DNI, nombre, edad, número de móvil, peso y seguro médico.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Base de datos</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>SQLite</h3>
+
+                    <p>
+                        Los datos se almacenan en una base de datos SQLite
+                        llamada <strong>clinica.db</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Pacientes</h3>
+
+                    <p>
+                        La tabla pacientes contiene información personal
+                        y datos relacionados con el seguro médico.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>DNI único</h3>
+
+                    <p>
+                        El DNI está definido como UNIQUE para evitar que
+                        existan dos pacientes con el mismo identificador.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Funcionalidades</h2>
+
+            <p>
+                La aplicación dispone de un menú desde el que se pueden
+                realizar diferentes operaciones sobre los pacientes.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Añadir pacientes</h3>
+
+                    <p>
+                        Permite registrar nuevos pacientes introduciendo
+                        sus datos personales y la información del seguro médico.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Consultar pacientes</h3>
+
+                    <p>
+                        Permite listar todos los pacientes y realizar
+                        búsquedas mediante DNI o nombre.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Actualizar datos</h3>
+
+                    <p>
+                        Permite modificar el nombre, edad, móvil, peso
+                        y seguro médico de un paciente.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Eliminar pacientes</h3>
+
+                    <p>
+                        Permite eliminar pacientes mediante su DNI,
+                        solicitando confirmación antes de realizar la operación.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Filtros</h3>
+
+                    <p>
+                        Permite listar pacientes asegurados, mayores de edad
+                        y pacientes dentro de un determinado rango de peso.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Añadir móvil</h3>
+
+                    <p>
+                        Permite introducir un número de móvil cuando
+                        un paciente todavía no dispone de él.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Consultas SQL</h2>
+
+            <p>
+                El proyecto utiliza diferentes consultas SQL para trabajar
+                con la información almacenada en la base de datos.
+            </p>
+
+            <p>
+                Se utilizan operaciones como INSERT, SELECT, UPDATE y DELETE
+                para implementar las funcionalidades principales de la aplicación.
+            </p>
+
+            <p>
+                También se utilizan consultas con WHERE, LIKE y BETWEEN
+                para realizar búsquedas y filtros sobre los pacientes.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>JDBC</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Connection</h3>
+
+                    <p>
+                        Se utiliza para establecer la conexión entre
+                        la aplicación Java y la base de datos SQLite.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>PreparedStatement</h3>
+
+                    <p>
+                        Permite ejecutar consultas SQL parametrizadas
+                        para trabajar con los datos de forma segura.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>ResultSet</h3>
+
+                    <p>
+                        Se utiliza para obtener y recorrer los resultados
+                        de las consultas realizadas a la base de datos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Statement</h3>
+
+                    <p>
+                        Permite ejecutar determinadas instrucciones SQL
+                        desde la aplicación.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+                <span>Programación Orientada a Objetos</span>
+                <span>JDBC</span>
+                <span>SQLite</span>
+                <span>Bases de datos relacionales</span>
+                <span>SQL</span>
+                <span>CRUD</span>
+                <span>PreparedStatement</span>
+                <span>ResultSet</span>
+                <span>Connection</span>
+                <span>Statement</span>
+                <span>Scanner</span>
+                <span>SQLException</span>
+                <span>Consultas parametrizadas</span>
+                <span>Filtros</span>
+                <span>Búsquedas</span>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Clase principal encargada de establecer la conexión,
+                        crear la tabla, mostrar el menú y gestionar las
+                        diferentes operaciones de la aplicación.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>clinica.db</h3>
+
+                    <p>
+                        Base de datos SQLite donde se almacenan los registros
+                        de los pacientes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                La práctica permite aplicar los conocimientos de Java y
+                bases de datos para crear una aplicación capaz de gestionar
+                información mediante operaciones CRUD y consultas SQL.
+            </p>
+
+            <p>
+                Además, permite trabajar con JDBC y SQLite, conectando
+                una aplicación Java con una base de datos relacional.
+            </p>
+
+            <a
+                href="https://github.com/natalipaulino13/practica.clinica.java"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
