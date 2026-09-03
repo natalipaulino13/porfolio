@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Granja de Animales | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Java · POO · Herencia · Interfaces
+            </span>
+
+            <h1>Granja de Animales</h1>
+
+            <p>
+                Aplicación desarrollada en Java para representar diferentes
+                animales de una granja utilizando programación orientada a
+                objetos, herencia, clases abstractas e interfaces.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.granja.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- SOBRE LA PRÁCTICA -->
+
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica pertenece al módulo de Programación del ciclo
+                de Desarrollo de Aplicaciones Web (DAW).
+            </p>
+
+            <p>
+                El proyecto consiste en crear una pequeña estructura de
+                animales de una granja utilizando programación orientada
+                a objetos.
+            </p>
+
+            <p>
+                Se trabajan conceptos como clases abstractas, herencia,
+                interfaces, encapsulamiento y sobrescritura de métodos.
+            </p>
+
+        </section>
+
+
+        <!-- ANIMALES -->
+
+        <section class="section">
+
+            <h2>Animales de la granja</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🐷 Cerdo</h3>
+
+                    <p>
+                        Hereda de la clase abstracta Animal y añade el
+                        atributo específico <strong>color</strong>.
+                    </p>
+
+                    <p>
+                        Implementa el método
+                        <strong>tipoAnimal()</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🐑 Oveja</h3>
+
+                    <p>
+                        Hereda de la clase abstracta Animal y añade el
+                        atributo <strong>tipoDePelo</strong>.
+                    </p>
+
+                    <p>
+                        Implementa el método
+                        <strong>tipoAnimal()</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🐄 Vaca</h3>
+
+                    <p>
+                        Hereda de Animal e implementa además la interfaz
+                        <strong>LecheProducida</strong>.
+                    </p>
+
+                    <p>
+                        Puede calcular aleatoriamente la cantidad de leche
+                        producida mediante el método
+                        <strong>ordenyar()</strong>.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASE ABSTRACTA -->
+
+        <section class="section">
+
+            <h2>Clase abstracta Animal</h2>
+
+            <p>
+                La clase <strong>Animal</strong> actúa como clase base para
+                los diferentes animales de la granja.
+            </p>
+
+            <p>
+                Contiene características comunes como el nombre, el peso
+                y la edad.
+            </p>
+
+            <p>
+                También define el método abstracto
+                <strong>tipoAnimal()</strong>, que cada animal debe
+                implementar según su propio tipo.
+            </p>
+
+        </section>
+
+
+        <!-- HERENCIA -->
+
+        <section class="section">
+
+            <h2>Herencia</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Animal → Cerdo</h3>
+
+                    <p>
+                        El cerdo hereda los atributos y métodos comunes
+                        definidos en Animal y añade su propio atributo
+                        relacionado con el color.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Animal → Oveja</h3>
+
+                    <p>
+                        La oveja hereda las características comunes de
+                        Animal y añade información sobre su tipo de pelo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Animal → Vaca</h3>
+
+                    <p>
+                        La vaca hereda de Animal y añade características
+                        propias relacionadas con la producción de leche.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERFAZ -->
+
+        <section class="section">
+
+            <h2>Interfaz LecheProducida</h2>
+
+            <p>
+                La interfaz <strong>LecheProducida</strong> define el
+                contrato para aquellos animales capaces de producir leche.
+            </p>
+
+            <p>
+                Contiene el método <strong>ordenyar()</strong>, encargado
+                de devolver la cantidad de leche producida.
+            </p>
+
+            <p>
+                La clase Vaca implementa esta interfaz y genera una cantidad
+                aleatoria de leche entre 3 y 8 litros, redondeada a un
+                decimal.
+            </p>
+
+        </section>
+
+
+        <!-- FUNCIONAMIENTO -->
+
+        <section class="section">
+
+            <h2>Funcionamiento</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Características comunes</h3>
+
+                    <p>
+                        Todos los animales comparten nombre, peso y edad,
+                        definidos en la clase abstracta Animal.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Tipos de animal</h3>
+
+                    <p>
+                        Cada clase implementa el método
+                        <strong>tipoAnimal()</strong> para definir
+                        el tipo correspondiente.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Producción de leche</h3>
+
+                    <p>
+                        Las vacas pueden generar aleatoriamente una cantidad
+                        de leche utilizando el método ordenyar().
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+
+                <span>POO</span>
+
+                <span>Clases y objetos</span>
+
+                <span>Clase abstracta</span>
+
+                <span>Herencia</span>
+
+                <span>Interfaces</span>
+
+                <span>Encapsulamiento</span>
+
+                <span>Constructores</span>
+
+                <span>Getters y setters</span>
+
+                <span>@Override</span>
+
+                <span>Random</span>
+
+                <span>Números aleatorios</span>
+
+                <span>Redondeo</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRUCTURA -->
+
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Animal.java</h3>
+
+                    <p>
+                        Clase abstracta que contiene las características
+                        comunes de los animales.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Cerdo.java</h3>
+
+                    <p>
+                        Clase que hereda de Animal y representa al cerdo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Oveja.java</h3>
+
+                    <p>
+                        Clase que hereda de Animal y representa a la oveja.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Vaca.java</h3>
+
+                    <p>
+                        Clase que hereda de Animal e implementa
+                        LecheProducida.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>LecheProducida.java</h3>
+
+                    <p>
+                        Interfaz que define el método para calcular
+                        la producción de leche.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                La práctica permite trabajar de forma práctica con
+                programación orientada a objetos mediante una estructura
+                basada en una clase abstracta y diferentes clases derivadas.
+            </p>
+
+            <p>
+                Además, permite aplicar herencia, interfaces,
+                sobrescritura de métodos y generación de valores
+                aleatorios en Java.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.granja.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
