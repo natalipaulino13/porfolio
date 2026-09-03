@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda de Contactos CSV | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Java · POO · ArrayList · Ficheros CSV
+            </span>
+
+            <h1>Agenda de Contactos</h1>
+
+            <p>
+                Aplicación desarrollada en Java para gestionar una agenda
+                de contactos utilizando ArrayList y ficheros CSV para
+                almacenar y recuperar la información.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.fichero.texto.git"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- SOBRE LA PRÁCTICA -->
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                El programa permite gestionar una lista de contactos
+                y guardar sus datos en un fichero llamado
+                <strong>contactos.csv</strong>.
+            </p>
+
+            <p>
+                Los contactos se almacenan en un
+                <strong>ArrayList</strong> mientras el programa está
+                en ejecución y se sincronizan con el fichero CSV
+                al añadir o eliminar contactos.
+            </p>
+
+        </section>
+
+
+        <!-- DATOS DEL CONTACTO -->
+        <section class="section">
+
+            <h2>Datos de cada contacto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Nombre</h3>
+                    <p>Nombre del contacto.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Apellido</h3>
+                    <p>Apellido del contacto.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Teléfono</h3>
+                    <p>Número de teléfono del contacto.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Email</h3>
+                    <p>Dirección de correo electrónico.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- GESTIÓN DE CONTACTOS -->
+        <section class="section">
+
+            <h2>Gestión de contactos</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>📋 Listar contactos</h3>
+
+                    <p>
+                        Muestra todos los contactos almacenados
+                        actualmente en el ArrayList.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>🔎 Buscar contacto</h3>
+
+                    <p>
+                        Permite buscar un contacto mediante su
+                        email o número de teléfono.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>➕ Añadir contacto</h3>
+
+                    <p>
+                        Permite introducir los datos de un nuevo
+                        contacto y comprueba que no exista otro
+                        con el mismo teléfono o email.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>🗑️ Eliminar contacto</h3>
+
+                    <p>
+                        Muestra la lista de contactos y permite
+                        seleccionar mediante su índice cuál
+                        se desea eliminar.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FICHERO CSV -->
+        <section class="section">
+
+            <h2>Fichero CSV</h2>
+
+            <p>
+                La información se almacena en el fichero
+                <strong>contactos.csv</strong>, utilizando
+                el carácter <strong>;</strong> como separador.
+            </p>
+
+            <div class="result">
+
+                <p>
+                    Ejemplo de almacenamiento:
+                </p>
+
+                <p>
+                    Ana;Pérez;600123456;ana@email.com
+                </p>
+
+                <p>
+                    Luis;García;611987654;luis@email.com
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LECTURA Y ESCRITURA -->
+        <section class="section">
+
+            <h2>Lectura y escritura de datos</h2>
+
+            <p>
+                Al iniciar el programa se intenta leer el fichero
+                <strong>contactos.csv</strong> utilizando
+                <strong>FileReader</strong> y
+                <strong>BufferedReader</strong>.
+            </p>
+
+            <p>
+                Cada línea se separa mediante
+                <strong>split(";")</strong> y se crea un objeto
+                <strong>Contacto</strong> por cada registro.
+            </p>
+
+            <p>
+                Al añadir un contacto se guarda al final del fichero.
+                Cuando se elimina un contacto, el fichero se vuelve
+                a escribir con los contactos restantes.
+            </p>
+
+        </section>
+
+
+        <!-- MENÚ -->
+        <section class="section">
+
+            <h2>Menú de la aplicación</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>1 · Listado de contactos</h3>
+                    <p>
+                        Muestra todos los contactos almacenados.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>2 · Buscar un contacto</h3>
+                    <p>
+                        Busca contactos mediante email o teléfono.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>3 · Introducir un nuevo contacto</h3>
+                    <p>
+                        Añade un nuevo contacto a la agenda.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>4 · Eliminar un contacto</h3>
+                    <p>
+                        Elimina un contacto seleccionado por índice.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASES -->
+        <section class="section">
+
+            <h2>Clases principales</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Contacto</h3>
+
+                    <p>
+                        Representa un contacto de la agenda mediante
+                        los atributos nombre, apellido, telefono
+                        y email.
+                    </p>
+
+                    <p>
+                        Incluye getters, setters y el método
+                        <strong>toString()</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main</h3>
+
+                    <p>
+                        Clase principal que utiliza un
+                        <strong>ArrayList&lt;Contacto&gt;</strong>
+                        para almacenar los contactos y gestionar
+                        el menú de la aplicación.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+                <span>POO</span>
+                <span>Clases y objetos</span>
+                <span>Encapsulamiento</span>
+                <span>Constructores</span>
+                <span>Getters y setters</span>
+                <span>ArrayList</span>
+                <span>Ficheros CSV</span>
+                <span>FileReader</span>
+                <span>FileWriter</span>
+                <span>BufferedReader</span>
+                <span>PrintWriter</span>
+                <span>split()</span>
+                <span>Scanner</span>
+                <span>switch</span>
+                <span>IOException</span>
+                <span>Búsqueda</span>
+                <span>Eliminación</span>
+                <span>Validación</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRUCTURA -->
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="result">
+
+                <p>📦 paq</p>
+
+                <p>
+                    ┣ 📜 Contacto.java
+                </p>
+
+                <p>
+                    ┣ 📜 Main.java
+                </p>
+
+                <p>
+                    ┗ 📜 contactos.csv
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                Práctica realizada para trabajar la gestión de
+                información mediante ArrayList y el almacenamiento
+                de datos utilizando ficheros CSV en Java.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.fichero.texto.git"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
