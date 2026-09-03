@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda de Contactos | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Java · POO · ArrayList · Serialización
+            </span>
+
+            <h1>Agenda de Contactos</h1>
+
+            <p>
+                Aplicación desarrollada en Java para gestionar una agenda
+                de contactos utilizando ArrayList y serialización de objetos
+                mediante un fichero binario.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.fichero.binario.git"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- SOBRE LA PRÁCTICA -->
+
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica pertenece al módulo de Programación del ciclo
+                de Desarrollo de Aplicaciones Web (DAW).
+            </p>
+
+            <p>
+                El proyecto consiste en desarrollar una agenda de contactos
+                utilizando un ArrayList para mantener los datos en memoria
+                y serialización de objetos para guardarlos en un fichero
+                binario.
+            </p>
+
+            <p>
+                Cada contacto contiene información como DNI, nombre,
+                apellido, teléfono y email.
+            </p>
+
+        </section>
+
+
+        <!-- GESTIÓN DE CONTACTOS -->
+
+        <section class="section">
+
+            <h2>Gestión de contactos</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Añadir contactos</h3>
+
+                    <p>
+                        Permite introducir un nuevo contacto indicando
+                        DNI, nombre, apellido, teléfono y email.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Listar contactos</h3>
+
+                    <p>
+                        Permite mostrar todos los contactos almacenados
+                        actualmente en memoria.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Eliminar contactos</h3>
+
+                    <p>
+                        Permite eliminar un contacto mediante la búsqueda
+                        de su DNI.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Actualizar fichero</h3>
+
+                    <p>
+                        Permite guardar en el fichero binario todos los
+                        contactos almacenados en memoria.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARRAYLIST -->
+
+        <section class="section">
+
+            <h2>ArrayList</h2>
+
+            <p>
+                Los contactos se mantienen en memoria mediante un
+                <strong>ArrayList&lt;Contacto&gt;</strong>.
+            </p>
+
+            <p>
+                Esta colección permite almacenar y gestionar dinámicamente
+                los diferentes contactos de la agenda.
+            </p>
+
+            <p>
+                Antes de añadir un contacto se comprueba que no exista otro
+                con el mismo DNI.
+            </p>
+
+        </section>
+
+
+        <!-- SERIALIZACIÓN -->
+
+        <section class="section">
+
+            <h2>Serialización</h2>
+
+            <p>
+                El proyecto utiliza la serialización de objetos de Java
+                para guardar el ArrayList completo en un fichero binario.
+            </p>
+
+            <p>
+                La clase <strong>Contacto</strong> implementa
+                <strong>Serializable</strong>, permitiendo almacenar
+                sus objetos directamente en el fichero.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Lectura</h3>
+
+                    <p>
+                        Se utilizan FileInputStream y ObjectInputStream
+                        para recuperar los contactos almacenados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Escritura</h3>
+
+                    <p>
+                        Se utilizan FileOutputStream y ObjectOutputStream
+                        para guardar los contactos en el fichero.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>contactos.bin</h3>
+
+                    <p>
+                        Es el fichero binario utilizado para conservar
+                        los contactos entre ejecuciones del programa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTROL DE CAMBIOS -->
+
+        <section class="section">
+
+            <h2>Control de cambios</h2>
+
+            <p>
+                El programa utiliza una variable llamada
+                <strong>cambios</strong> para controlar si existen
+                modificaciones pendientes de guardar.
+            </p>
+
+            <p>
+                Cuando se añade o elimina un contacto se marcan cambios
+                pendientes.
+            </p>
+
+            <p>
+                Si no existen cambios, el fichero no se actualiza.
+                Al salir del programa, los cambios pendientes se guardan
+                automáticamente antes de finalizar.
+            </p>
+
+        </section>
+
+
+        <!-- MENÚ -->
+
+        <section class="section">
+
+            <h2>Menú de la aplicación</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>1. Listar contactos</h3>
+
+                    <p>
+                        Muestra los contactos que se encuentran actualmente
+                        en memoria.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>2. Introducir contacto</h3>
+
+                    <p>
+                        Permite crear y añadir un nuevo contacto a la agenda.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>3. Eliminar contacto</h3>
+
+                    <p>
+                        Busca un contacto mediante su DNI y permite
+                        eliminarlo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>4. Actualizar fichero</h3>
+
+                    <p>
+                        Guarda los contactos de memoria en
+                        <strong>contactos.bin</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>5. Salir</h3>
+
+                    <p>
+                        Comprueba si existen cambios pendientes y los
+                        guarda antes de finalizar el programa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASES -->
+
+        <section class="section">
+
+            <h2>Clases principales</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Contacto.java</h3>
+
+                    <p>
+                        Clase que representa cada contacto de la agenda.
+                        Implementa Serializable para permitir su
+                        almacenamiento en el fichero binario.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Clase principal encargada de gestionar el menú,
+                        el ArrayList de contactos y la lectura y escritura
+                        del fichero.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+
+                <span>POO</span>
+
+                <span>Clases y objetos</span>
+
+                <span>Encapsulamiento</span>
+
+                <span>Constructores</span>
+
+                <span>Getters y setters</span>
+
+                <span>ArrayList</span>
+
+                <span>Serialización</span>
+
+                <span>Serializable</span>
+
+                <span>FileInputStream</span>
+
+                <span>FileOutputStream</span>
+
+                <span>ObjectInputStream</span>
+
+                <span>ObjectOutputStream</span>
+
+                <span>Ficheros binarios</span>
+
+                <span>IOException</span>
+
+                <span>Scanner</span>
+
+                <span>Switch</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRUCTURA -->
+
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Contacto.java</h3>
+
+                    <p>
+                        Clase encargada de representar los datos de cada
+                        contacto y permitir su serialización.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Gestiona el funcionamiento principal de la agenda,
+                        el menú y las operaciones sobre los contactos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>contactos.bin</h3>
+
+                    <p>
+                        Fichero binario utilizado para guardar y recuperar
+                        los contactos mediante serialización.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                La práctica permite crear una agenda de contactos capaz
+                de mantener información en memoria y conservarla entre
+                diferentes ejecuciones del programa.
+            </p>
+
+            <p>
+                Además, permite aplicar ArrayList y serialización de
+                objetos para trabajar con ficheros binarios en Java.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.fichero.binario.git"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
