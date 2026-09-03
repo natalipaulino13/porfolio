@@ -1,0 +1,324 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="hero">
+
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Nataly Paulino</a>
+
+            <div class="nav-links">
+                <a href="../index.html#sobre-mi">Sobre mí</a>
+                <a href="../index.html#practicas">Prácticas</a>
+                <a href="../index.html#contacto">Contacto</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="hero-tag">Java · JDBC · SQLite · SQL</p>
+
+            <h1>Biblioteca</h1>
+
+            <p class="hero-description">
+                Aplicación desarrollada en Java para gestionar una biblioteca
+                utilizando JDBC y SQLite, permitiendo realizar operaciones CRUD,
+                búsquedas, filtros y ordenación de libros.
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="practice-page">
+
+        <!-- SOBRE LA PRÁCTICA -->
+        <section class="practice-section">
+
+            <p class="section-label">01 · DESCRIPCIÓN</p>
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica consiste en desarrollar una aplicación de gestión
+                de una biblioteca utilizando Java, JDBC y SQLite.
+            </p>
+
+            <p>
+                La aplicación permite administrar los libros almacenados en una
+                base de datos mediante diferentes operaciones de consulta,
+                modificación, eliminación, búsqueda y ordenación.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.bbdd.java"
+               target="_blank"
+               class="project-link">
+                Ver proyecto en GitHub →
+            </a>
+
+        </section>
+
+
+        <!-- BASE DE DATOS -->
+        <section class="practice-section">
+
+            <p class="section-label">02 · BASE DE DATOS</p>
+
+            <h2>Base de datos</h2>
+
+            <p>
+                La aplicación utiliza una base de datos SQLite llamada
+                <strong>biblioteca.db</strong>.
+            </p>
+
+            <p>
+                La tabla principal es <strong>libros</strong> y contiene los
+                siguientes campos:
+            </p>
+
+            <div class="code-box">
+                <p><strong>id</strong> — Identificador del libro</p>
+                <p><strong>titulo</strong> — Título del libro</p>
+                <p><strong>autor</strong> — Autor del libro</p>
+                <p><strong>anio</strong> — Año de publicación</p>
+                <p><strong>genero</strong> — Género literario</p>
+                <p><strong>disponible</strong> — Disponibilidad del libro</p>
+            </div>
+
+            <p>
+                La tabla se crea automáticamente si no existe.
+            </p>
+
+        </section>
+
+
+        <!-- CLASE PRINCIPAL -->
+        <section class="practice-section">
+
+            <p class="section-label">03 · JAVA</p>
+
+            <h2>Clase principal</h2>
+
+            <p>
+                La aplicación utiliza una clase principal que muestra un menú
+                por consola para gestionar los libros de la biblioteca.
+            </p>
+
+            <div class="code-box">
+                <p>1.- Añadir libro</p>
+                <p>2.- Listar todos los libros</p>
+                <p>3.- Buscar libro</p>
+                <p>4.- Actualizar libro</p>
+                <p>5.- Eliminar libro</p>
+                <p>6.- Listar libros disponibles</p>
+                <p>7.- Búsqueda avanzada</p>
+                <p>8.- Listar libros ordenados</p>
+                <p>0.- Salir</p>
+            </div>
+
+        </section>
+
+
+        <!-- FUNCIONALIDADES -->
+        <section class="practice-section">
+
+            <p class="section-label">04 · FUNCIONALIDADES</p>
+
+            <h2>Funcionalidades</h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <h3>➕ Añadir libro</h3>
+                    <p>
+                        Permite introducir título, autor, año, género y
+                        disponibilidad. También evita duplicados.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📋 Listar libros</h3>
+                    <p>
+                        Muestra todos los libros almacenados en la base de datos.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔎 Buscar libro</h3>
+                    <p>
+                        Permite buscar libros por ID, título o autor mediante
+                        consultas parametrizadas.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>✏️ Actualizar</h3>
+                    <p>
+                        Permite modificar los datos de un libro utilizando su ID.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🗑️ Eliminar</h3>
+                    <p>
+                        Permite eliminar un libro de la base de datos solicitando
+                        confirmación.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📚 Disponibles</h3>
+                    <p>
+                        Muestra únicamente los libros que están disponibles.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔍 Búsqueda avanzada</h3>
+                    <p>
+                        Permite filtrar los libros por autor, género y
+                        disponibilidad.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>↕️ Ordenación</h3>
+                    <p>
+                        Permite ordenar los libros por título, autor o año.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONEXIÓN -->
+        <section class="practice-section">
+
+            <p class="section-label">05 · JDBC</p>
+
+            <h2>Conexión con la base de datos</h2>
+
+            <p>
+                La aplicación utiliza JDBC para establecer la conexión entre
+                Java y SQLite.
+            </p>
+
+            <div class="tags">
+                <span>Connection</span>
+                <span>DriverManager</span>
+                <span>Statement</span>
+                <span>PreparedStatement</span>
+                <span>ResultSet</span>
+            </div>
+
+        </section>
+
+
+        <!-- CRUD -->
+        <section class="practice-section">
+
+            <p class="section-label">06 · CRUD</p>
+
+            <h2>Operaciones CRUD</h2>
+
+            <div class="crud-grid">
+
+                <div class="feature-card">
+                    <h3>CREATE</h3>
+                    <p>INSERT — Añadir nuevos libros.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>READ</h3>
+                    <p>SELECT — Consultar y buscar libros.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>UPDATE</h3>
+                    <p>UPDATE — Modificar información.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>DELETE</h3>
+                    <p>DELETE — Eliminar libros.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+        <section class="practice-section">
+
+            <p class="section-label">07 · CONCEPTOS</p>
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="tags">
+                <span>Java</span>
+                <span>POO</span>
+                <span>JDBC</span>
+                <span>SQLite</span>
+                <span>SQL</span>
+                <span>CRUD</span>
+                <span>PreparedStatement</span>
+                <span>ResultSet</span>
+                <span>ORDER BY</span>
+                <span>LIKE</span>
+                <span>Scanner</span>
+                <span>SQLException</span>
+                <span>switch</span>
+                <span>Validación</span>
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section class="practice-section">
+
+            <p class="section-label">08 · RESULTADO</p>
+
+            <h2>Resultado</h2>
+
+            <p>
+                El resultado es una aplicación de consola capaz de gestionar
+                una biblioteca completa mediante una base de datos SQLite,
+                aplicando Java, SQL y JDBC.
+            </p>
+
+            <p>
+                Como ejemplo, se puede registrar el libro
+                <strong>El Quijote</strong>, de
+                <strong>Miguel de Cervantes</strong>, publicado en
+                <strong>1605</strong>, perteneciente al género
+                <strong>Novela</strong> y disponible.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE -->
+    <footer class="footer">
+        <p>© 2026 Nataly Paulino · DAW</p>
+    </footer>
+
+</body>
+</html>
+```
