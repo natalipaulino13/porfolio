@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,67 +14,71 @@
 <body>
 
     <!-- CABECERA -->
+
     <header class="hero">
 
-        <nav class="navbar">
-            <a href="../index.html" class="logo">Nataly Paulino</a>
-
-            <div class="nav-links">
-                <a href="../index.html#sobre-mi">Sobre mí</a>
-                <a href="../index.html#practicas">Prácticas</a>
-                <a href="../index.html#contacto">Contacto</a>
-            </div>
-        </nav>
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
 
         <div class="hero-content">
-            <p class="hero-tag">Java · JDBC · SQLite · SQL</p>
+
+            <span class="tag">
+                Java · JDBC · SQLite · SQL
+            </span>
 
             <h1>Biblioteca</h1>
 
-            <p class="hero-description">
+            <p>
                 Aplicación desarrollada en Java para gestionar una biblioteca
                 utilizando JDBC y SQLite, permitiendo realizar operaciones CRUD,
                 búsquedas, filtros y ordenación de libros.
             </p>
+
+            <a href="https://github.com/natalipaulino13/practica.bbdd.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
         </div>
 
     </header>
 
 
     <!-- CONTENIDO -->
-    <main class="practice-page">
+
+    <main>
 
         <!-- SOBRE LA PRÁCTICA -->
-        <section class="practice-section">
 
-            <p class="section-label">01 · DESCRIPCIÓN</p>
+        <section class="section">
 
             <h2>Sobre la práctica</h2>
 
             <p>
-                Esta práctica consiste en desarrollar una aplicación de gestión
+                Esta práctica pertenece al módulo de Programación del ciclo
+                de Desarrollo de Aplicaciones Web (DAW).
+            </p>
+
+            <p>
+                El proyecto consiste en desarrollar una aplicación de gestión
                 de una biblioteca utilizando Java, JDBC y SQLite.
             </p>
 
             <p>
-                La aplicación permite administrar los libros almacenados en una
-                base de datos mediante diferentes operaciones de consulta,
-                modificación, eliminación, búsqueda y ordenación.
+                La aplicación permite administrar los libros almacenados en
+                una base de datos mediante operaciones de creación, consulta,
+                actualización y eliminación.
             </p>
-
-            <a href="https://github.com/natalipaulino13/practica.bbdd.java"
-               target="_blank"
-               class="project-link">
-                Ver proyecto en GitHub →
-            </a>
 
         </section>
 
 
         <!-- BASE DE DATOS -->
-        <section class="practice-section">
 
-            <p class="section-label">02 · BASE DE DATOS</p>
+        <section class="section">
 
             <h2>Base de datos</h2>
 
@@ -83,178 +88,518 @@
             </p>
 
             <p>
-                La tabla principal es <strong>libros</strong> y contiene los
-                siguientes campos:
+                La tabla principal es <strong>libros</strong> y contiene
+                información sobre los libros almacenados.
             </p>
 
-            <div class="code-box">
-                <p><strong>id</strong> — Identificador del libro</p>
-                <p><strong>titulo</strong> — Título del libro</p>
-                <p><strong>autor</strong> — Autor del libro</p>
-                <p><strong>anio</strong> — Año de publicación</p>
-                <p><strong>genero</strong> — Género literario</p>
-                <p><strong>disponible</strong> — Disponibilidad del libro</p>
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>id</h3>
+
+                    <p>
+                        Identificador único utilizado para identificar
+                        cada libro.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>titulo</h3>
+
+                    <p>
+                        Título del libro almacenado en la biblioteca.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>autor</h3>
+
+                    <p>
+                        Autor correspondiente al libro registrado.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>anio</h3>
+
+                    <p>
+                        Año de publicación del libro.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>genero</h3>
+
+                    <p>
+                        Género literario al que pertenece el libro.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>disponible</h3>
+
+                    <p>
+                        Indica si el libro se encuentra disponible
+                        mediante los valores 1 o 0.
+                    </p>
+
+                </article>
+
             </div>
 
             <p>
-                La tabla se crea automáticamente si no existe.
+                La tabla <strong>libros</strong> se crea automáticamente
+                si no existe en la base de datos.
             </p>
-
-        </section>
-
-
-        <!-- CLASE PRINCIPAL -->
-        <section class="practice-section">
-
-            <p class="section-label">03 · JAVA</p>
-
-            <h2>Clase principal</h2>
-
-            <p>
-                La aplicación utiliza una clase principal que muestra un menú
-                por consola para gestionar los libros de la biblioteca.
-            </p>
-
-            <div class="code-box">
-                <p>1.- Añadir libro</p>
-                <p>2.- Listar todos los libros</p>
-                <p>3.- Buscar libro</p>
-                <p>4.- Actualizar libro</p>
-                <p>5.- Eliminar libro</p>
-                <p>6.- Listar libros disponibles</p>
-                <p>7.- Búsqueda avanzada</p>
-                <p>8.- Listar libros ordenados</p>
-                <p>0.- Salir</p>
-            </div>
 
         </section>
 
 
         <!-- FUNCIONALIDADES -->
-        <section class="practice-section">
 
-            <p class="section-label">04 · FUNCIONALIDADES</p>
+        <section class="section">
 
-            <h2>Funcionalidades</h2>
+            <h2>Gestión de libros</h2>
 
-            <div class="features-grid">
+            <div class="cards">
 
-                <div class="feature-card">
-                    <h3>➕ Añadir libro</h3>
+                <article class="card">
+
+                    <h3>Añadir libro</h3>
+
                     <p>
-                        Permite introducir título, autor, año, género y
-                        disponibilidad. También evita duplicados.
+                        Permite introducir título, autor, año, género
+                        y disponibilidad. También comprueba que no exista
+                        otro libro con el mismo título, autor y año.
                     </p>
-                </div>
 
-                <div class="feature-card">
-                    <h3>📋 Listar libros</h3>
-                    <p>
-                        Muestra todos los libros almacenados en la base de datos.
-                    </p>
-                </div>
+                </article>
 
-                <div class="feature-card">
-                    <h3>🔎 Buscar libro</h3>
-                    <p>
-                        Permite buscar libros por ID, título o autor mediante
-                        consultas parametrizadas.
-                    </p>
-                </div>
 
-                <div class="feature-card">
-                    <h3>✏️ Actualizar</h3>
-                    <p>
-                        Permite modificar los datos de un libro utilizando su ID.
-                    </p>
-                </div>
+                <article class="card">
 
-                <div class="feature-card">
-                    <h3>🗑️ Eliminar</h3>
-                    <p>
-                        Permite eliminar un libro de la base de datos solicitando
-                        confirmación.
-                    </p>
-                </div>
+                    <h3>Listar libros</h3>
 
-                <div class="feature-card">
-                    <h3>📚 Disponibles</h3>
                     <p>
-                        Muestra únicamente los libros que están disponibles.
+                        Permite mostrar todos los libros almacenados
+                        actualmente en la base de datos.
                     </p>
-                </div>
 
-                <div class="feature-card">
-                    <h3>🔍 Búsqueda avanzada</h3>
-                    <p>
-                        Permite filtrar los libros por autor, género y
-                        disponibilidad.
-                    </p>
-                </div>
+                </article>
 
-                <div class="feature-card">
-                    <h3>↕️ Ordenación</h3>
+
+                <article class="card">
+
+                    <h3>Buscar libro</h3>
+
                     <p>
-                        Permite ordenar los libros por título, autor o año.
+                        Permite buscar un libro mediante su ID, título
+                        o autor utilizando consultas parametrizadas.
                     </p>
-                </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Actualizar libro</h3>
+
+                    <p>
+                        Permite modificar los datos de un libro mediante
+                        su ID. Los campos que se dejan vacíos mantienen
+                        su valor anterior.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Eliminar libro</h3>
+
+                    <p>
+                        Permite eliminar un libro mediante su ID después
+                        de solicitar confirmación.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Libros disponibles</h3>
+
+                    <p>
+                        Muestra únicamente los libros que tienen marcada
+                        su disponibilidad.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Búsqueda avanzada</h3>
+
+                    <p>
+                        Permite realizar búsquedas utilizando diferentes
+                        criterios como autor, género y disponibilidad.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Ordenar libros</h3>
+
+                    <p>
+                        Permite ordenar los libros por título, autor
+                        o año de publicación.
+                    </p>
+
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- CONEXIÓN -->
-        <section class="practice-section">
+        <!-- JDBC -->
 
-            <p class="section-label">05 · JDBC</p>
+        <section class="section">
 
-            <h2>Conexión con la base de datos</h2>
+            <h2>Conexión con SQLite mediante JDBC</h2>
 
             <p>
-                La aplicación utiliza JDBC para establecer la conexión entre
-                Java y SQLite.
+                La aplicación utiliza JDBC para establecer la conexión
+                entre Java y la base de datos SQLite.
             </p>
 
-            <div class="tags">
-                <span>Connection</span>
-                <span>DriverManager</span>
-                <span>Statement</span>
-                <span>PreparedStatement</span>
-                <span>ResultSet</span>
+            <p>
+                Para trabajar con la base de datos se utilizan diferentes
+                elementos de JDBC para crear conexiones, ejecutar consultas
+                y recuperar los resultados.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Connection</h3>
+
+                    <p>
+                        Representa la conexión establecida con la base
+                        de datos SQLite.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>DriverManager</h3>
+
+                    <p>
+                        Se utiliza para establecer la conexión con
+                        la base de datos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>PreparedStatement</h3>
+
+                    <p>
+                        Permite ejecutar consultas parametrizadas para
+                        realizar búsquedas y operaciones de forma segura.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>ResultSet</h3>
+
+                    <p>
+                        Permite recorrer y obtener los resultados de
+                        las consultas realizadas.
+                    </p>
+
+                </article>
+
             </div>
 
         </section>
 
 
         <!-- CRUD -->
-        <section class="practice-section">
 
-            <p class="section-label">06 · CRUD</p>
+        <section class="section">
 
             <h2>Operaciones CRUD</h2>
 
-            <div class="crud-grid">
+            <p>
+                El proyecto aplica las principales operaciones CRUD
+                sobre la tabla <strong>libros</strong>.
+            </p>
 
-                <div class="feature-card">
-                    <h3>CREATE</h3>
-                    <p>INSERT — Añadir nuevos libros.</p>
-                </div>
+            <div class="cards">
 
-                <div class="feature-card">
-                    <h3>READ</h3>
-                    <p>SELECT — Consultar y buscar libros.</p>
-                </div>
+                <article class="card">
 
-                <div class="feature-card">
+                    <h3>CREATE · INSERT</h3>
+
+                    <p>
+                        Permite introducir nuevos libros en la base
+                        de datos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>READ · SELECT</h3>
+
+                    <p>
+                        Permite consultar, listar y buscar los libros
+                        almacenados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
                     <h3>UPDATE</h3>
-                    <p>UPDATE — Modificar información.</p>
-                </div>
 
-                <div class="feature-card">
+                    <p>
+                        Permite actualizar la información de un libro
+                        existente.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
                     <h3>DELETE</h3>
-                    <p>DELETE — Eliminar libros.</p>
-                </div>
+
+                    <p>
+                        Permite eliminar libros de la base de datos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENÚ -->
+
+        <section class="section">
+
+            <h2>Menú de la aplicación</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>1. Añadir libro</h3>
+
+                    <p>
+                        Permite registrar un nuevo libro en la biblioteca.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>2. Listar todos los libros</h3>
+
+                    <p>
+                        Muestra todos los libros almacenados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>3. Buscar libro</h3>
+
+                    <p>
+                        Permite buscar libros por ID, título o autor.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>4. Actualizar libro</h3>
+
+                    <p>
+                        Permite modificar los datos de un libro existente.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>5. Eliminar libro</h3>
+
+                    <p>
+                        Permite eliminar un libro mediante su ID.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>6. Libros disponibles</h3>
+
+                    <p>
+                        Muestra los libros que están disponibles.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>7. Búsqueda avanzada</h3>
+
+                    <p>
+                        Permite buscar utilizando autor, género
+                        y disponibilidad.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>8. Libros ordenados</h3>
+
+                    <p>
+                        Permite ordenar los libros por título, autor
+                        o año.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>0. Salir</h3>
+
+                    <p>
+                        Finaliza la ejecución de la aplicación.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- VALIDACIONES -->
+
+        <section class="section">
+
+            <h2>Validaciones</h2>
+
+            <p>
+                La aplicación incorpora diferentes comprobaciones para
+                controlar los datos introducidos por el usuario.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Año de publicación</h3>
+
+                    <p>
+                        El año debe encontrarse entre 1500 y 2026.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Disponibilidad</h3>
+
+                    <p>
+                        La disponibilidad se introduce mediante los valores
+                        1 para disponible y 0 para no disponible.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Libros duplicados</h3>
+
+                    <p>
+                        Se evita registrar un libro que tenga el mismo
+                        título, autor y año.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASE PRINCIPAL -->
+
+        <section class="section">
+
+            <h2>Clase principal</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Clase principal encargada de mostrar el menú,
+                        gestionar las opciones seleccionadas y realizar
+                        las operaciones sobre la base de datos SQLite.
+                    </p>
+
+                </article>
 
             </div>
 
@@ -262,52 +607,83 @@
 
 
         <!-- CONCEPTOS -->
-        <section class="practice-section">
 
-            <p class="section-label">07 · CONCEPTOS</p>
+        <section class="section">
 
             <h2>Conceptos utilizados</h2>
 
-            <div class="tags">
+            <div class="skills">
+
                 <span>Java</span>
+
                 <span>POO</span>
+
                 <span>JDBC</span>
+
                 <span>SQLite</span>
+
                 <span>SQL</span>
+
                 <span>CRUD</span>
+
+                <span>Connection</span>
+
+                <span>DriverManager</span>
+
+                <span>Statement</span>
+
                 <span>PreparedStatement</span>
+
                 <span>ResultSet</span>
+
+                <span>INSERT</span>
+
+                <span>SELECT</span>
+
+                <span>UPDATE</span>
+
+                <span>DELETE</span>
+
                 <span>ORDER BY</span>
+
                 <span>LIKE</span>
+
                 <span>Scanner</span>
+
                 <span>SQLException</span>
-                <span>switch</span>
+
+                <span>Switch</span>
+
                 <span>Validación</span>
+
             </div>
 
         </section>
 
 
         <!-- RESULTADO -->
-        <section class="practice-section">
 
-            <p class="section-label">08 · RESULTADO</p>
+        <section class="section result">
 
             <h2>Resultado</h2>
 
             <p>
                 El resultado es una aplicación de consola capaz de gestionar
-                una biblioteca completa mediante una base de datos SQLite,
-                aplicando Java, SQL y JDBC.
+                una biblioteca mediante Java, JDBC y SQLite, permitiendo
+                almacenar, consultar, modificar y eliminar libros.
             </p>
 
             <p>
-                Como ejemplo, se puede registrar el libro
-                <strong>El Quijote</strong>, de
-                <strong>Miguel de Cervantes</strong>, publicado en
-                <strong>1605</strong>, perteneciente al género
-                <strong>Novela</strong> y disponible.
+                Además, incorpora búsquedas, filtros, ordenación y
+                validaciones para controlar los datos introducidos.
             </p>
+
+            <a href="https://github.com/natalipaulino13/practica.bbdd.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
 
         </section>
 
@@ -315,10 +691,16 @@
 
 
     <!-- PIE -->
-    <footer class="footer">
-        <p>© 2026 Nataly Paulino · DAW</p>
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
     </footer>
 
 </body>
+
 </html>
 
