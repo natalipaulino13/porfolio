@@ -1,0 +1,462 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alquiler de Coches | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Java · POO · Colecciones · ArrayList · Comparator
+            </span>
+
+            <h1>Alquiler de Coches</h1>
+
+            <p>
+                Aplicación desarrollada en Java para gestionar un sistema
+                de alquiler de coches utilizando programación orientada a
+                objetos, colecciones ArrayList y clases Comparator.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.alquiler.coche.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- SOBRE LA PRÁCTICA -->
+
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica pertenece al módulo de Programación del ciclo
+                de Desarrollo de Aplicaciones Web (DAW).
+            </p>
+
+            <p>
+                El proyecto consiste en desarrollar una aplicación para
+                gestionar un sistema de alquiler de coches utilizando
+                programación orientada a objetos y colecciones.
+            </p>
+
+            <p>
+                La aplicación permite gestionar coches disponibles y
+                alquilados, introducir nuevos vehículos, realizar alquileres
+                y devoluciones, avanzar los días de alquiler y consultar
+                diferentes listados ordenados.
+            </p>
+
+        </section>
+
+
+        <!-- CLASES PRINCIPALES -->
+
+        <section class="section">
+
+            <h2>Clases principales</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Coche</h3>
+
+                    <p>
+                        Representa los vehículos de la aplicación y contiene
+                        información como matrícula, marca, modelo, potencia
+                        y días alquilado.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main</h3>
+
+                    <p>
+                        Contiene el menú principal y controla las diferentes
+                        operaciones de gestión de los coches.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>OrdenadoMarca</h3>
+
+                    <p>
+                        Implementa Comparator para ordenar los coches
+                        utilizando su marca sin distinguir entre
+                        mayúsculas y minúsculas.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>OrdenadoPotencia</h3>
+
+                    <p>
+                        Implementa Comparator para ordenar los coches
+                        según su potencia de menor a mayor.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLECCIONES -->
+
+        <section class="section">
+
+            <h2>Gestión de colecciones</h2>
+
+            <p>
+                El proyecto utiliza colecciones de Java para almacenar y
+                gestionar los diferentes coches durante la ejecución.
+            </p>
+
+            <p>
+                Se utilizan principalmente objetos
+                <strong>ArrayList&lt;Coche&gt;</strong> para trabajar con
+                listas dinámicas de vehículos.
+            </p>
+
+            <p>
+                El programa utiliza tres listas principales:
+                <strong>disponibles</strong>, <strong>alquilados</strong>
+                y <strong>totales</strong>.
+            </p>
+
+            <p>
+                Estas colecciones permiten añadir, eliminar, consultar y
+                ordenar los coches según diferentes criterios.
+            </p>
+
+        </section>
+
+
+        <!-- FUNCIONALIDADES -->
+
+        <section class="section">
+
+            <h2>Funcionalidades</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Gestión de coches</h3>
+
+                    <p>
+                        Permite consultar los coches disponibles y los que
+                        se encuentran actualmente alquilados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Nuevo coche</h3>
+
+                    <p>
+                        Permite introducir un nuevo vehículo indicando
+                        matrícula, marca, modelo y potencia.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Alquiler y devolución</h3>
+
+                    <p>
+                        Permite alquilar coches disponibles y devolver
+                        vehículos alquilados calculando el precio según
+                        los días de alquiler.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Pasar día</h3>
+
+                    <p>
+                        Permite avanzar el día del sistema y aumentar
+                        automáticamente los días alquilados de los coches
+                        que están en alquiler.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRAMACIÓN ORIENTADA A OBJETOS -->
+
+        <section class="section">
+
+            <h2>Programación Orientada a Objetos</h2>
+
+            <p>
+                El proyecto está estructurado mediante diferentes clases
+                que representan los elementos principales de la aplicación.
+            </p>
+
+            <p>
+                La clase <strong>Coche</strong> encapsula los datos de cada
+                vehículo mediante atributos privados y métodos getters y
+                setters para acceder y modificar su información.
+            </p>
+
+            <p>
+                Se utilizan conceptos fundamentales de la programación
+                orientada a objetos como clases, objetos, atributos,
+                métodos, encapsulación, constructores y sobrescritura
+                del método <strong>toString()</strong>.
+            </p>
+
+        </section>
+
+
+        <!-- ORDENACIÓN -->
+
+        <section class="section">
+
+            <h2>Ordenación de datos</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Comparator</h3>
+
+                    <p>
+                        El proyecto utiliza diferentes clases que
+                        implementan <strong>Comparator&lt;Coche&gt;</strong>
+                        para definir cómo se deben ordenar los vehículos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Por matrícula</h3>
+
+                    <p>
+                        La clase OrdenadoMatricula permite ordenar los
+                        coches utilizando su matrícula mediante
+                        compareToIgnoreCase().
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Por marca</h3>
+
+                    <p>
+                        La clase OrdenadoMarca permite ordenar los coches
+                        alfabéticamente según su marca.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Por potencia</h3>
+
+                    <p>
+                        La clase OrdenadoPotencia permite ordenar los
+                        vehículos según su potencia utilizando
+                        Integer.compare().
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+
+                <span>POO</span>
+
+                <span>Clases</span>
+
+                <span>Objetos</span>
+
+                <span>Encapsulación</span>
+
+                <span>ArrayList</span>
+
+                <span>Colecciones</span>
+
+                <span>Comparator</span>
+
+                <span>Collections.sort()</span>
+
+                <span>Scanner</span>
+
+                <span>Switch</span>
+
+                <span>Bucles</span>
+
+                <span>Métodos</span>
+
+                <span>Atributos</span>
+
+                <span>Constructores</span>
+
+                <span>toString()</span>
+
+                <span>Ordenación</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRUCTURA -->
+
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Coche.java</h3>
+
+                    <p>
+                        Clase encargada de representar los vehículos,
+                        almacenando sus datos y proporcionando métodos
+                        para acceder y modificar su información.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Clase principal encargada de ejecutar la aplicación,
+                        mostrar el menú y gestionar los alquileres,
+                        devoluciones y listados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Comparadores</h3>
+
+                    <p>
+                        Las clases OrdenadoDia, OrdenadoMarca,
+                        OrdenadoMatricula y OrdenadoPotencia permiten
+                        ordenar los coches según diferentes criterios.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                La práctica permite aplicar los conocimientos de Java y
+                programación orientada a objetos mediante una aplicación
+                basada en la gestión de un sistema de alquiler de coches.
+            </p>
+
+            <p>
+                Además, permite trabajar con colecciones ArrayList,
+                gestión de objetos, cambio de estado de los vehículos,
+                cálculo del precio del alquiler y ordenación mediante
+                diferentes clases Comparator.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.alquiler.coche.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
