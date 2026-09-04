@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feria de Atracciones | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="hero">
+
+        <a href="../index.html" class="back">← Volver al portfolio</a>
+
+        <div class="hero-content">
+
+            <span class="tag">Java · POO · ArrayList · Interfaces</span>
+
+            <h1>Feria de Atracciones</h1>
+
+            <p>
+                Aplicación desarrollada en Java para gestionar una pequeña feria
+                de atracciones, sus feriantes, los cuadrantes de trabajo y las
+                ganancias de la semana.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/parque.atracciones.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- SOBRE LA PRÁCTICA -->
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica consiste en desarrollar una aplicación para la
+                gestión de una pequeña feria de atracciones utilizando Java,
+                programación orientada a objetos y colecciones.
+            </p>
+
+            <p>
+                La feria dispone de tres atracciones: Tío Vivo, Noria y
+                Coches de Choque. Cada atracción tiene un precio por ticket
+                y un precio de bono con descuento.
+            </p>
+
+            <p>
+                La aplicación permite gestionar los feriantes, asignar cada
+                feriante a una atracción en un día determinado y calcular las
+                ganancias aleatorias de toda la semana.
+            </p>
+
+        </section>
+
+
+        <!-- ATRACCIONES -->
+        <section class="section">
+
+            <h2>Atracciones y precios</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🎠 Tío Vivo</h3>
+
+                    <p>
+                        Precio del ticket: <strong>2,5 €</strong>
+                    </p>
+
+                    <p>
+                        Bono de 6 tickets con un descuento del 80%:
+                        <strong>12 €</strong>
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🎡 Noria</h3>
+
+                    <p>
+                        Precio del ticket: <strong>4 €</strong>
+                    </p>
+
+                    <p>
+                        Bono de 5 tickets con un descuento del 90%:
+                        <strong>18 €</strong>
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🚗 Coches de Choque</h3>
+
+                    <p>
+                        Precio del ticket: <strong>2,5 €</strong>
+                    </p>
+
+                    <p>
+                        Bono de 10 tickets con un descuento del 60%:
+                        <strong>15 €</strong>
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERFAZ ABONO -->
+        <section class="section">
+
+            <h2>Interfaz Abono</h2>
+
+            <p>
+                La interfaz <strong>Abono</strong> define el contrato que deben
+                cumplir las atracciones para calcular el precio de sus bonos.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>precioAbono()</h3>
+
+                    <p>
+                        Método encargado de calcular el precio del bono
+                        utilizando el precio del ticket, el número de tickets
+                        y el descuento correspondiente.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASE ATRACCION -->
+        <section class="section">
+
+            <h2>Clase Atraccion</h2>
+
+            <p>
+                La clase <strong>Atraccion</strong> implementa la interfaz
+                <strong>Abono</strong> y representa cada una de las atracciones
+                disponibles en la feria.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Atributos</h3>
+
+                    <p>
+                        <strong>nombre</strong>,
+                        <strong>precioTicket</strong>,
+                        <strong>numeroTickets</strong> y
+                        <strong>descuento</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Métodos</h3>
+
+                    <p>
+                        Incluye el método <strong>precioAbono()</strong>,
+                        además de getters, setters y
+                        <strong>toString()</strong>.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FERIANTE -->
+        <section class="section">
+
+            <h2>Clase Feriante</h2>
+
+            <p>
+                La clase <strong>Feriante</strong> representa a las personas
+                encargadas de trabajar en las diferentes atracciones de la
+                feria.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Datos del feriante</h3>
+
+                    <p>
+                        Cada feriante contiene los atributos
+                        <strong>nombre</strong>,
+                        <strong>apellido</strong> y
+                        <strong>edad</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Métodos</h3>
+
+                    <p>
+                        Dispone de getters, setters y
+                        <strong>toString()</strong> para gestionar y mostrar
+                        sus datos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CUADRANTE -->
+        <section class="section">
+
+            <h2>Clase Cuadrante</h2>
+
+            <p>
+                La clase <strong>Cuadrante</strong> permite asociar un día
+                concreto con un feriante y una atracción.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Asignación</h3>
+
+                    <p>
+                        El cuadrante contiene los datos del
+                        <strong>día</strong>, el
+                        <strong>feriante</strong> y la
+                        <strong>atracción</strong> asignada.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Gestión</h3>
+
+                    <p>
+                        Los datos pueden consultarse y modificarse mediante
+                        getters y setters, además de poder mostrarse mediante
+                        <strong>toString()</strong>.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLECCIONES -->
+        <section class="section">
+
+            <h2>Gestión con ArrayList</h2>
+
+            <p>
+                El programa utiliza tres colecciones
+                <strong>ArrayList</strong> para gestionar las diferentes
+                partes de la aplicación.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🎢 Atracciones</h3>
+
+                    <p>
+                        Lista que contiene las tres atracciones disponibles
+                        en la feria.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>👷 Feriantes</h3>
+
+                    <p>
+                        Lista utilizada para almacenar y gestionar los
+                        feriantes registrados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>📅 Cuadrantes</h3>
+
+                    <p>
+                        Lista donde se almacenan las asociaciones entre días,
+                        feriantes y atracciones.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENÚ -->
+        <section class="section">
+
+            <h2>Menú de la aplicación</h2>
+
+            <p>
+                La aplicación dispone de un menú principal con seis opciones
+                para gestionar la feria.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>1. Muestra de precios</h3>
+
+                    <p>
+                        Muestra el precio de los tickets y de los bonos de
+                        cada una de las atracciones.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>2. Introducción de feriante</h3>
+
+                    <p>
+                        Permite añadir un nuevo feriante a la lista.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>3. Eliminar feriante</h3>
+
+                    <p>
+                        Permite eliminar un feriante de la gestión de la
+                        feria.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>4. Asociar día</h3>
+
+                    <p>
+                        Permite asociar un día con una atracción y un
+                        feriante mediante el cuadrante.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>5. Mostrar cuadrante</h3>
+
+                    <p>
+                        Muestra las asignaciones realizadas previamente
+                        en el cuadrante.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>6. Ganancias de la semana</h3>
+
+                    <p>
+                        Calcula y muestra las ganancias aleatorias de las
+                        atracciones durante los siete días.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- GANANCIAS -->
+        <section class="section">
+
+            <h2>Ganancias de la semana</h2>
+
+            <p>
+                El programa utiliza una matriz de
+                <strong>7 × 3</strong> para representar las ganancias
+                generadas por las tres atracciones durante los siete días
+                de la semana.
+            </p>
+
+            <p>
+                Las ganancias se generan aleatoriamente con valores
+                comprendidos entre <strong>100 € y 500 €</strong>.
+                Posteriormente se calcula cuál ha sido la atracción con
+                mayor ganancia en cada día.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>📊 Cálculo diario</h3>
+
+                    <p>
+                        Para cada día se determina qué atracción ha obtenido
+                        la ganancia máxima.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>📅 Semana completa</h3>
+
+                    <p>
+                        Se muestran los máximos obtenidos durante los siete
+                        días de la semana.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASES -->
+        <section class="section">
+
+            <h2>Clases principales</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Abono</h3>
+
+                    <p>
+                        Interfaz que define el método
+                        <strong>precioAbono()</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Atraccion</h3>
+
+                    <p>
+                        Representa las atracciones y calcula el precio de
+                        sus bonos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Feriante</h3>
+
+                    <p>
+                        Representa a los trabajadores de la feria.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Cuadrante</h3>
+
+                    <p>
+                        Relaciona días, feriantes y atracciones.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main</h3>
+
+                    <p>
+                        Contiene el menú principal y gestiona las colecciones,
+                        asignaciones y ganancias.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+                <span>POO</span>
+                <span>Clases</span>
+                <span>Objetos</span>
+                <span>Encapsulación</span>
+                <span>Interfaces</span>
+                <span>ArrayList</span>
+                <span>Colecciones</span>
+                <span>Getters y Setters</span>
+                <span>toString()</span>
+                <span>Switch</span>
+                <span>Scanner</span>
+                <span>Matrices</span>
+                <span>Valores aleatorios</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRUCTURA -->
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Abono</h3>
+
+                    <p>
+                        Interfaz utilizada para definir el cálculo del precio
+                        de los bonos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Atraccion</h3>
+
+                    <p>
+                        Clase encargada de representar cada atracción de la
+                        feria.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Feriante</h3>
+
+                    <p>
+                        Clase utilizada para gestionar los trabajadores.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Cuadrante</h3>
+
+                    <p>
+                        Clase encargada de almacenar las asignaciones de
+                        días, feriantes y atracciones.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main</h3>
+
+                    <p>
+                        Clase principal que contiene el menú y la lógica
+                        general de la aplicación.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                El resultado es una aplicación de consola desarrollada en
+                Java que permite gestionar una pequeña feria de atracciones,
+                administrar sus feriantes, crear cuadrantes de trabajo y
+                consultar las ganancias generadas durante una semana.
+            </p>
+
+            <p>
+                La práctica permite aplicar conceptos de programación
+                orientada a objetos, interfaces y colecciones
+                <strong>ArrayList</strong>.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/parque.atracciones.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
