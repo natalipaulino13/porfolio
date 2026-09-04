@@ -1,0 +1,671 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Alumnos | Nataly Paulino</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+
+    <header class="hero">
+
+        <a href="../index.html" class="back">
+            ← Volver al portfolio
+        </a>
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Java · POO · ArrayList · HashSet
+            </span>
+
+            <h1>Gestión de Alumnos</h1>
+
+            <p>
+                Aplicación desarrollada en Java para gestionar un censo
+                de alumnos y un registro de partes utilizando diferentes
+                colecciones de Java.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.censo.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver práctica en GitHub ↗
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <!-- SOBRE LA PRÁCTICA -->
+
+        <section class="section">
+
+            <h2>Sobre la práctica</h2>
+
+            <p>
+                Esta práctica pertenece al módulo de Programación del ciclo
+                de Desarrollo de Aplicaciones Web (DAW).
+            </p>
+
+            <p>
+                El proyecto consiste en desarrollar una aplicación para
+                gestionar un <strong>censo de alumnos</strong> y un
+                <strong>registro de partes</strong>.
+            </p>
+
+            <p>
+                Para ello se utilizan diferentes colecciones de Java,
+                concretamente un <strong>ArrayList</strong> para almacenar
+                los partes registrados y un <strong>HashSet</strong> para
+                mantener el censo de alumnos sin duplicados.
+            </p>
+
+        </section>
+
+
+        <!-- GESTIÓN DEL CENSO -->
+
+        <section class="section">
+
+            <h2>Gestión del censo</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Mostrar censo</h3>
+
+                    <p>
+                        Permite mostrar todos los alumnos que forman parte
+                        actualmente del censo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Añadir alumno</h3>
+
+                    <p>
+                        Permite introducir nuevos alumnos en el censo,
+                        evitando que existan alumnos duplicados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Eliminar alumno</h3>
+
+                    <p>
+                        Permite eliminar un alumno del censo mediante
+                        su ID.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Buscar alumno</h3>
+
+                    <p>
+                        Permite buscar los datos de un alumno utilizando
+                        su ID.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- REGISTRO DE PARTES -->
+
+        <section class="section">
+
+            <h2>Registro de partes</h2>
+
+            <p>
+                El programa mantiene un registro de partes asociados a los
+                alumnos mediante un <strong>ArrayList</strong>.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Añadir parte</h3>
+
+                    <p>
+                        Permite poner un parte a un alumno buscándolo
+                        mediante su ID.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Mostrar partes</h3>
+
+                    <p>
+                        Permite mostrar todos los partes registrados
+                        actualmente.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Número de partes</h3>
+
+                    <p>
+                        Permite consultar el número total de partes
+                        registrados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Partes por alumno</h3>
+
+                    <p>
+                        Permite buscar un alumno mediante su ID y mostrar
+                        cuántos partes tiene registrados.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARRAYLIST -->
+
+        <section class="section">
+
+            <h2>ArrayList</h2>
+
+            <p>
+                El proyecto utiliza un <strong>ArrayList&lt;Alumno&gt;</strong>
+                para almacenar los partes registrados.
+            </p>
+
+            <p>
+                Esta colección permite almacenar elementos repetidos,
+                por lo que un mismo alumno puede aparecer varias veces
+                si tiene varios partes.
+            </p>
+
+            <p>
+                La lista utilizada en el programa es:
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>partes</h3>
+
+                    <p>
+                        <strong>ArrayList&lt;Alumno&gt;</strong> encargado
+                        de almacenar los partes registrados.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HASHSET -->
+
+        <section class="section">
+
+            <h2>HashSet</h2>
+
+            <p>
+                El <strong>HashSet</strong> se utiliza para almacenar
+                los alumnos que forman parte del censo.
+            </p>
+
+            <p>
+                Esta colección no permite alumnos duplicados. Para
+                determinar si dos alumnos son iguales se utilizan
+                los métodos <strong>equals()</strong> y
+                <strong>hashCode()</strong>.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>censo</h3>
+
+                    <p>
+                        <strong>Set&lt;Alumno&gt;</strong> encargado de
+                        mantener los alumnos del censo sin duplicados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>equals()</h3>
+
+                    <p>
+                        Compara dos alumnos utilizando su ID para
+                        determinar si son iguales.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>hashCode()</h3>
+
+                    <p>
+                        Genera el código hash de cada alumno utilizando
+                        su ID.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASE ALUMNO -->
+
+        <section class="section">
+
+            <h2>Clase Alumno</h2>
+
+            <p>
+                La clase <strong>Alumno</strong> representa a cada
+                alumno almacenado en el censo y en el registro de partes.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>id</h3>
+
+                    <p>
+                        Identificador utilizado para identificar a cada
+                        alumno y comprobar si dos objetos son iguales.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>nombre</h3>
+
+                    <p>
+                        Nombre del alumno.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>curso</h3>
+
+                    <p>
+                        Curso en el que se encuentra matriculado
+                        el alumno.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Métodos</h3>
+
+                    <p>
+                        Incluye getters, setters, toString(), equals()
+                        y hashCode().
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENÚ -->
+
+        <section class="section">
+
+            <h2>Menú de la aplicación</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>1. Mostrar censo</h3>
+
+                    <p>
+                        Muestra todos los alumnos que pertenecen al censo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>2. Mostrar partes</h3>
+
+                    <p>
+                        Muestra el registro de partes almacenados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>3. Añadir alumno</h3>
+
+                    <p>
+                        Permite añadir un nuevo alumno al censo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>4. Eliminar alumno</h3>
+
+                    <p>
+                        Permite eliminar un alumno del censo mediante
+                        su ID.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>5. Poner parte</h3>
+
+                    <p>
+                        Permite añadir un parte a un alumno buscándolo
+                        mediante su ID.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>6. Número de alumnos</h3>
+
+                    <p>
+                        Muestra el número de alumnos que forman parte
+                        del censo.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>7. Número de partes</h3>
+
+                    <p>
+                        Muestra el número total de partes registrados.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>8. Buscar alumno</h3>
+
+                    <p>
+                        Busca los datos de un alumno mediante su ID y
+                        muestra cuántos partes tiene.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>9. Salir</h3>
+
+                    <p>
+                        Finaliza la ejecución del programa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ELIMINACIÓN -->
+
+        <section class="section">
+
+            <h2>Eliminación de alumnos</h2>
+
+            <p>
+                Cuando se elimina un alumno del censo mediante su ID,
+                también se eliminan sus partes registradas.
+            </p>
+
+            <p>
+                De esta forma, el registro de partes se mantiene
+                relacionado con los alumnos que continúan formando
+                parte del censo.
+            </p>
+
+        </section>
+
+
+        <!-- CLASES -->
+
+        <section class="section">
+
+            <h2>Clases principales</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Alumno.java</h3>
+
+                    <p>
+                        Clase que representa los datos de cada alumno.
+                        Contiene ID, nombre y curso, además de los métodos
+                        necesarios para comparar y mostrar los objetos.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Clase principal encargada de gestionar el menú,
+                        el censo de alumnos, el registro de partes y las
+                        operaciones realizadas sobre las colecciones.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPTOS -->
+
+        <section class="section">
+
+            <h2>Conceptos utilizados</h2>
+
+            <div class="skills">
+
+                <span>Java</span>
+
+                <span>POO</span>
+
+                <span>Clases y objetos</span>
+
+                <span>Encapsulamiento</span>
+
+                <span>Constructores</span>
+
+                <span>Getters y setters</span>
+
+                <span>ArrayList</span>
+
+                <span>HashSet</span>
+
+                <span>Set</span>
+
+                <span>Colecciones de Java</span>
+
+                <span>equals()</span>
+
+                <span>hashCode()</span>
+
+                <span>toString()</span>
+
+                <span>Búsqueda por ID</span>
+
+                <span>Scanner</span>
+
+                <span>Switch</span>
+
+                <span>Bucles</span>
+
+                <span>Condicionales</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRUCTURA -->
+
+        <section class="section">
+
+            <h2>Estructura del proyecto</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Alumno.java</h3>
+
+                    <p>
+                        Clase encargada de representar los datos de los
+                        alumnos y definir la comparación mediante su ID.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Main.java</h3>
+
+                    <p>
+                        Gestiona el funcionamiento principal del programa,
+                        el menú y las colecciones utilizadas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section class="section result">
+
+            <h2>Resultado</h2>
+
+            <p>
+                La práctica permite gestionar un censo de alumnos y un
+                registro de partes utilizando diferentes colecciones
+                de Java.
+            </p>
+
+            <p>
+                El uso de <strong>HashSet</strong> permite mantener el
+                censo sin alumnos duplicados, mientras que
+                <strong>ArrayList</strong> permite almacenar los partes
+                registrados, incluso cuando un mismo alumno tiene varios.
+            </p>
+
+            <a href="https://github.com/natalipaulino13/practica.censo.java"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Ver código fuente ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE -->
+
+    <footer>
+
+        <p>
+            © 2026 Nataly Paulino · Desarrollo de Aplicaciones Web
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
